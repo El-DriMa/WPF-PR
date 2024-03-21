@@ -5,16 +5,28 @@ namespace WPFTutorial
   
     public partial class MainWindow : Window
     {
+        //bool running = false;
         public MainWindow()
         {
             InitializeComponent();
-            tbHello.Text = "Hello World";
-            btnRun.Content = "Stop";
+           
         }
 
-        private void btnRun_Click(object sender, RoutedEventArgs e)
+        /*private void btnToggleRun_Click(object sender, RoutedEventArgs e)
         {
-
-        }
+            if(running)
+            {
+                //Stop
+                tbStatus.Text = "Stopped";
+                btnToggleRun.Content = "Run";
+            }
+            else
+            {
+                //Run
+                tbStatus.Text = "Running";
+                btnToggleRun.Content = "Stop";
+            }
+            running = !running;
+        }*/
     }
 }
