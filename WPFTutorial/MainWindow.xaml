@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-       
-
-        <TextBlock Text="Hello World!" FontSize="75" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Name="tbHello" Text="Hello2" FontSize="50"></TextBlock>
+        <Button Name="btnRun" Width="100" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center"
+                Content="Run" FontSize="20" Click="btnRun_Click"></Button>
     </Grid>
 </Window>
