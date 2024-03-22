@@ -1,0 +1,25 @@
+﻿<Grid Background="White">
+        <TextBox x:Name="txtInput" VerticalContentAlignment="Center"
+                 FontSize="16" FontWeight="Light" Background="Transparent"
+                 TextChanged="txtInput_TextChanged"/>
+        <TextBlock x:Name="tbPlaceholder" Text="{Binding Placeholder}" FontSize="16"
+                   FontWeight="Light" Foreground="DarkGray" VerticalAlignment="Center" 
+                   Margin="5,0,0,0" Panel.ZIndex="-1"/>
+        <Button x:Name="btnClear" Width="20" HorizontalAlignment="Right"
+                Content="X" Background="Transparent" Foreground="LightGray"
+                BorderThickness="0" Click="btnClear_Click"/>
+    </Grid>
+
+    //main
+      <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <userControls:TextBox2 Grid.Row="1" Width="250" Height="40" Placeholder="First Name"/>
+        <userControls:TextBox2 Grid.Row="2" Width="250" Height="40" Placeholder="Last Name"/>
+        <userControls:TextBox2 Grid.Row="3" Width="250" Height="40" Placeholder="Email"/>
+        <userControls:TextBox2 Grid.Row="4" Width="250" Height="40" Placeholder="Password"/>
