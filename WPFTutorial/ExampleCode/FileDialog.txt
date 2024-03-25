@@ -1,0 +1,18 @@
+﻿   private void btnFire_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog fd = new OpenFileDialog();
+            fd.Filter = "C# Source Files | *.cs";//Sve sto zavrsava sa .cs
+         // fd.InitialDirectory = "C:\\temp"; -ako folder ne postoji,otvori na zadnjem
+            fd.Title = "Pweaseeeeee";
+            fd.Multiselect = true;
+
+            //?-3 states,null,true false,zato treba == true
+            bool? success= fd.ShowDialog();
+            if (success==true)
+            {
+                //[] kolekcija vise fajlova
+                string path = fd.FileName;//citava putanja
+                string fileName = fd.SafeFileName;//samo ime fajla
+                tbInfo.Text = fileName;
+            }
+        }
