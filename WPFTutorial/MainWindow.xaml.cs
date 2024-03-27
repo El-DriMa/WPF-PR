@@ -16,16 +16,24 @@ namespace WPFTutorial
             InitializeComponent();
         }
 
-        private void btnFire_Click(object sender, RoutedEventArgs e)
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            //radi i bez ovog
-            WinForms.FolderBrowserDialog dialog1 = new FolderBrowserDialog();
-            dialog1.InitialDirectory = "C:\\Users\\HOME\\Documents\\WPF Projects\\WPFTutorial\\WPFTutorial";
-            WinForms.DialogResult result= dialog1.ShowDialog();
-            if(result==WinForms.DialogResult.OK)
-            {
-                string folder = dialog1.SelectedPath;
-            }
+            lvEntries.Items.Add(txtEntries.Text);
+            txtEntries.Clear();
+        }
+
+        private void btnDel_Click(object sender, RoutedEventArgs e)
+        {
+            //int index = lvEntries.SelectedIndex; //first selected
+            object item = lvEntries.SelectedItem;
+            var result = System.Windows.MessageBox.Show($"Are you sure you want to delete : {(string)item}", "Sure", MessageBoxButtons.YesNo);
+           if(result==MessageBoxResult.Yes)
+                lvEntries.Items.Remove(item);
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            lvEntries.Items.Clear();
         }
     }
 }
